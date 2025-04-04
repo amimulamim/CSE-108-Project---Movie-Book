@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="354.0" prefWidth="651.0" style="-fx-background-color: maroon;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.MoviePopUp">
+   <children>
+      <Label fx:id="Title" alignment="CENTER" layoutX="5.0" prefHeight="57.0" prefWidth="646.0" text="Title" underline="true">
+         <font>
+            <Font name="JetBrains Mono Medium" size="24.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Label>
+      <Label fx:id="releaseYear" layoutX="25.0" layoutY="73.0" text="Release Year" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Thin" size="12.0" />
+         </font></Label>
+      <Label fx:id="genres" layoutX="25.0" layoutY="107.0" text="Genres" textFill="WHITE" />
+      <Label fx:id="runtime" layoutX="28.0" layoutY="138.0" text="rt" textFill="WHITE" />
+      <Label fx:id="prodComp" layoutX="26.0" layoutY="165.0" text="PPC" textFill="WHITE" />
+      <Label fx:id="budget" layoutX="24.0" layoutY="200.0" text="Budget" textFill="WHITE" />
+      <Label fx:id="revenue" layoutX="22.0" layoutY="229.0" text="revenue" textFill="WHITE" />
+      <Button layoutX="291.0" layoutY="314.0" mnemonicParsing="false" onAction="#onCloseMovieDetails" style="-fx-background-color: pink; -fx-background-radius: 15; -fx-border-radius: 15;" text="Close" />
+      <ImageView fx:id="movieImage" fitHeight="198.0" fitWidth="200.0" layoutX="437.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true" />
+      <Hyperlink fx:id="hyperlink" layoutX="96.0" layoutY="252.0" onAction="#onClickLink" prefHeight="30.0" prefWidth="504.0" text="Trailer:" textFill="#2907bf" />
+      <Label layoutX="29.0" layoutY="259.0" text="Trailer:" textFill="#170cef" />
+   </children>
+</AnchorPane>

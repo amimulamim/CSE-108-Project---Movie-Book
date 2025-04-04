@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="onSaveTransfer" prefHeight="233.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.Transfer">
+   <children>
+      <Label layoutX="46.0" layoutY="81.0" text="Movie Name : " textFill="#080ec7" />
+      <TextField fx:id="movieName" layoutX="150.0" layoutY="76.0" prefHeight="26.0" prefWidth="347.0" promptText="Enter the Movie name to transfer" />
+      <TextField fx:id="transferTo" layoutX="150.0" layoutY="117.0" prefHeight="26.0" prefWidth="347.0" promptText="Enter the Buyer Production Company to transfer" />
+      <Label layoutX="31.0" layoutY="121.0" text="Receiver Company : " textFill="#610cc9" />
+      <Label layoutX="192.0" layoutY="21.0" text="Movie Transfer" textFill="#a60859">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Button cancelButton="true" layoutX="159.0" layoutY="188.0" mnemonicParsing="false" onAction="#onCancelTransfer" text="Cancel" textFill="#d90e0e" />
+      <Button layoutX="239.0" layoutY="188.0" mnemonicParsing="false" onAction="#onSaveTransfer" text="Save" textFill="#100a2b" />
+      <Label fx:id="alertLabel" layoutX="218.0" layoutY="156.0" textFill="#fa1212" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="241.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.YearGenreQuery">
+   <children>
+      <Label fx:id="queryLabel" layoutX="158.0" layoutY="46.0" text="Label" textFill="#12cbcc">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstTextField" layoutX="58.0" layoutY="111.0" prefHeight="26.0" prefWidth="484.0" />
+      <Button fx:id="cancelQuery" cancelButton="true" layoutX="122.0" layoutY="193.0" mnemonicParsing="false" onAction="#onCancelQuery" text="Cancel" textFill="#ef1111" />
+      <TextField fx:id="secondTextField" layoutX="58.0" layoutY="155.0" prefHeight="26.0" prefWidth="484.0" />
+      <Button fx:id="filter" layoutX="226.0" layoutY="193.0" mnemonicParsing="false" onAction="#onFilterClick" text="Filter" />
+   </children>
+</AnchorPane>

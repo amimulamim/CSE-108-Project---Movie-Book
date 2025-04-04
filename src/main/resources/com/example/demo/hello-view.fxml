@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="500.0" spacing="20.0" style="-fx-background-color: #2F4F4F;" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="WELCOME" textFill="#24badc">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="69.0" />
+         </font>
+      </Label>
+      <Label fx:id="LoginStatus" textFill="#f2230f">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="UsernameField" alignment="CENTER" promptText="Enter Username of Production Company" style="-fx-background-radius: 15; -fx-background-color: #F0F8FF;" />
+      <PasswordField fx:id="passField" alignment="CENTER" promptText="Enter your Password" style="-fx-background-radius: 15; -fx-background-color: #F0F8FF;" />
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="loginButton" defaultButton="true" layoutX="230.0" layoutY="21.0" mnemonicParsing="false" onAction="#onLoginButtonClick" prefHeight="26.0" prefWidth="63.0" style="-fx-background-radius: 15;" text="Login" textFill="#4a13d4">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="resetButton" layoutX="156.0" layoutY="24.0" mnemonicParsing="false" onAction="#onResetButtonClick" prefHeight="30.0" prefWidth="56.0" style="-fx-background-radius: 10;" text="Reset" textFill="#d41919" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

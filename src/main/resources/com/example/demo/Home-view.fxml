@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<SplitPane dividerPositions="0.29797979797979796" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.HomeView">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="474.0" prefWidth="124.0" style="-fx-background-color: #2F4F4F;">
+         <children>
+            <Button fx:id="addButton" layoutX="21.0" layoutY="351.0" mnemonicParsing="false" onAction="#onaddClick" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #F0FFF0; -fx-background-radius: 10;" text="Add Movies" textFill="#15bdaf" />
+            <Button fx:id="transferButton" layoutX="21.0" layoutY="401.0" mnemonicParsing="false" onAction="#OnTransferClick" prefHeight="26.0" prefWidth="175.0" style="-fx-background-color: #F0FFF0; -fx-background-radius: 10;" text="Transfer Movies" textFill="#199c8c" />
+            <Button fx:id="logOutButton" layoutX="78.0" layoutY="507.0" mnemonicParsing="false" onAction="#onLogOutClick" style="-fx-background-color: pink; -fx-background-radius: 20;" text="Log Out" textFill="#ef1313">
+               <font>
+                  <Font name="Impact" size="12.0" />
+               </font></Button>
+            <Button layoutX="53.0" layoutY="467.0" mnemonicParsing="false" onAction="#onChangePasswordClick" style="-fx-background-color: #F0FFF0; -fx-background-radius: 10;" text="Change Password" textFill="#0b4da9" />
+            <Label fx:id="CompanyName" layoutX="14.0" layoutY="21.0" text="Name" textFill="#0f7dbd">
+               <font>
+                  <Font name="Impact" size="21.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageView" fitHeight="229.0" fitWidth="207.0" layoutX="8.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="transferStatus" layoutX="78.0" layoutY="436.0" textFill="#ff0505" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="418.0">
+         <children>
+            <TableView layoutY="150.0" prefHeight="200.0" prefWidth="514.0" visible="false">
+              <columns>
+                <TableColumn prefWidth="75.0" text="Title" />
+                  <TableColumn prefWidth="75.0" text="Genres" />
+                  <TableColumn prefWidth="75.0" text="Duration" />
+                  <TableColumn prefWidth="75.0" text="Budget" />
+                  <TableColumn prefWidth="75.0" text="Revenue" />
+                <TableColumn prefWidth="75.0" text="Release" />
+              </columns>
+            </TableView>
+            <CheckBox fx:id="profitBox" layoutX="378.0" layoutY="45.0" mnemonicParsing="false" onAction="#onProfitShow" text="Show Total Profit">
+               <font>
+                  <Font name="Haettenschweiler" size="12.0" />
+               </font></CheckBox>
+            <MenuButton layoutX="8.0" layoutY="110.0" mnemonicParsing="false" style="-fx-background-radius: 5;" text="Filter By">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#searchMostRecent" text="Most Recent" />
+                <MenuItem mnemonicParsing="false" onAction="#searchMaximumRevenue" text="Maximum Revenue" />
+                  <MenuItem fx:id="releaseYear" mnemonicParsing="false" onAction="#onYearFilter" text="Release Year" />
+                  <MenuItem fx:id="genre" mnemonicParsing="false" onAction="#onGenreFilter" text="Genre" />
+                  <MenuItem fx:id="runningTime" mnemonicParsing="false" onAction="#onRunningTimeFilter" text="Running Time" />
+              </items>
+            </MenuButton>
+            <Label fx:id="totalMovies" layoutX="183.0" layoutY="81.0" text="MovieCount">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="12.0" />
+               </font></Label>
+            <Label fx:id="profitShow" layoutX="183.0" layoutY="101.0">
+               <font>
+                  <Font name="JetBrains Mono Light" size="12.0" />
+               </font></Label>
+            <ListView fx:id="listView" layoutX="3.0" layoutY="150.0" prefHeight="385.0" prefWidth="507.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ListView>
+            <Button fx:id="backTo" layoutX="8.0" layoutY="495.0" mnemonicParsing="false" onAction="#onBackToClick" text="Back" visible="false" />
+            <Label layoutX="173.0" layoutY="14.0" text="Our Movies" textFill="#13d1cb">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningMessage" layoutX="89.0" layoutY="127.0" prefHeight="0.0" prefWidth="402.0" textFill="#ef1212" />
+            <Label fx:id="notFound" layoutX="183.0" layoutY="295.0" prefHeight="18.0" prefWidth="167.0" text="No such movie found!!" textFill="#152e91" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
